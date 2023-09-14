@@ -1,4 +1,7 @@
 # EldenRingBowFarmingAFK
+
+Download V1 from [here](https://github.com/iltitti/EldenRingBowFarming/releases/tag/v1)
+
 Here are the requirements you need to meet in order for this to work.
 Some of them are the same as the ones in the [Automatic Farming Script for Elden Ring by KaiDaLuck](https://github.com/KaiDaLuck/EldenRingFarming)
 
