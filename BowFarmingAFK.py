@@ -1,5 +1,5 @@
 import time as t
-from directkeys import PressKey, ReleaseKey, W, A, S, D, J, E, F, G, Q, Z, Mouse, UP, DOWN, LEFT, RIGHT, SPACE
+from directkeys import PressKey, ReleaseKey, W, A, S, D, J, E, F, G, Q, I, O, P, Mouse, UP, DOWN, LEFT, RIGHT, SPACE
 import signal
 import sys
 import keyboard as k
@@ -13,7 +13,7 @@ def keyPress(key, dur):
     exit1()
     ReleaseKey(key)
     exit1()
-    t.sleep(0.1)
+    t.sleep(0.1)     
 
 def sprint(dur):
     exit1()
@@ -32,6 +32,7 @@ def exit1():
         raise KeyboardInterrupt
 def main():
     d=20
+    d1=18
     a=3.5
     b=0.9
     c=0.8
@@ -50,14 +51,17 @@ def main():
         keyPress(E,0.1)
         keyPress(E,0.1)
         t.sleep(5)
-        Mouse(-100*d,0,)
+        Mouse(-118*d1,24*d1,)
         sprint(1)
-        Mouse(-8*d,20*d,)
-        keyPress(Z,1)
+        PressKey(J)
+        t.sleep(0.1)
+        PressKey(O)
+        t.sleep(0.1)
+        keyPress(P,0.1)
         t.sleep(5)
-        Mouse(180*d,0,)
-        sprint(1.5)
-        t.sleep(0.5)
+        ReleaseKey(O)
+        ReleaseKey(J)
+        t.sleep(5)
         cycle+=1
         
 

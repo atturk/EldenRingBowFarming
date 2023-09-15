@@ -19,6 +19,11 @@ Q = 0x10
 Z = 0x2C
 G = 0x22
 F = 0x21
+#---------
+I = 0x17
+O = 0x18
+P = 0x19
+#---------
 ESC = 0x01
 UP = 0xC8
 DOWN = 0xD0
@@ -94,7 +99,4 @@ def ReleaseKey(hexKeyCode):
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
 if __name__ == '__main__':
-    PressKey(0x11)
-    time.sleep(1)
-    ReleaseKey(0x11)
-    time.sleep(1)
+    left_click()

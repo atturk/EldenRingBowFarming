@@ -13,7 +13,7 @@ In order to use most versions you need to install the "keyboard" package. To ins
 Ingame requirements:
 - Hold the bow in both hands
 - make sure you have a lot of arrows
-- rebind "Attack" to "Z" in the settings
+- rebind "Skill" to "J", "Guard" to "O" and "Attack" to "P" in the settings
 - mark the "Palace Approach Ledge-Road" site of grace in your grace menu on the map. do that by standing or sitting at the site of grace and pressing the following buttons:
 -     XBOX Controller: MENU, Y, RS
 -     PS Controller: SHARE, TRIANGLE, R3
