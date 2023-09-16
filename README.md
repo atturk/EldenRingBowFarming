@@ -21,6 +21,6 @@ Download latest version from [here](https://github.com/iltitti/EldenRingBowFarmi
 
 ### How to run
 
-Open cmd, type in "py" or "python", leave a space and drag "BowFarmingAFK.py" onto the terminal. 
+Open cmd, type in "py" or "python", put a space and drag "BowFarmingAFK.py" onto the terminal.
 As in [KaiDaLuck version](https://github.com/KaiDaLuck/EldenRingFarming), a 5 second countdown will begin. 
 You should be able to stop the macro anytime by pressing enter
