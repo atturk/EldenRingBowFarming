@@ -16,7 +16,7 @@ Download latest version from [here](https://github.com/atturk/EldenRingBowFarmin
 - Hold the bow in both hands
 - buy as many arrows as you can, most merchants sell an infinite amount of them
 - make sure your bow has the skill "Mighty Shot". You can buy it from the Twin Maiden Husks at the roundtable hold
-- rebind "Skill" to "J", "Guard" to "O" and "Attack" to "P" in the settings
+- rebind "Skill" to "J" and "Attack" to "P" in the settings
 - mark the "Palace Approach Ledge-Road" site of grace in your grace menu on the map by standing or sitting at the site of grace and pressing the following buttons:
   - XBOX Controller: MENU, Y, RS
   - PS Controller: SHARE, TRIANGLE, R3
