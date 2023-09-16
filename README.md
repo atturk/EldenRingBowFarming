@@ -1,6 +1,6 @@
 # EldenRingBowFarmingAFK
 
-Download latest version from [here](https://github.com/iltitti/EldenRingBowFarming/releases/tag/success)
+Download latest version from [here](https://github.com/iltitti/EldenRingBowFarming/releases/tag/v3.0)
 
 ### Installation
 
