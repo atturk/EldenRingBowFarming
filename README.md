@@ -1,6 +1,9 @@
 # EldenRingBowFarmingAFK
 
-Download latest version from [here](https://github.com/iltitti/EldenRingBowFarming/releases/tag/v3.0)
+Make up to 635k runes every 20 minutes (almost 2M/h) with the golden scarab talisman equipped.
+Currently, the bird jumps off the cliff 77% of the time on average (1.46M/h).
+
+Download latest version from [here](https://github.com/atturk/EldenRingBowFarming/releases/tag/v3.0)
 
 ### Installation
 
