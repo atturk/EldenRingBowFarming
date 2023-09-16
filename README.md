@@ -9,7 +9,7 @@ Download latest version from [here](https://github.com/atturk/EldenRingBowFarmin
 
 1) Put "directkeys.py" and "BowFarmingAFK.py" in the same folder
 2) If you do not have python, install it by typing "python" in cmd or download it from [here](https://www.python.org/downloads/)
-3) Install the "keyboard" package by typing "py -m pip install --upgrade keyboard" or "python -m pip install --upgrade keyboard" in cmd
+3) Install the "keyboard" package by typing `-  py -m pip install --upgrade keyboard` or `python -m pip install --upgrade keyboard` in cmd
 
 
 ### Ingame requirements:
