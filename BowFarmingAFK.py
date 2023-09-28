@@ -1,102 +1,64 @@
-import time as t
-from directkeys import PressKey, ReleaseKey, W, A, S, D, J, E, F, G, Q, I, O, P, Mouse, UP, DOWN, LEFT, RIGHT, SPACE
-import signal
-import sys
-import keyboard as k
-run = True
+from directkeys import PressKey, ReleaseKey, Mouse, W, J, E, F, G, Q, P, SPACE
+import time, keyboard, threading, os
 
-def keyPress(key, dur):
-    exit1()
-    PressKey(key)
-    exit1()
-    t.sleep(dur)
-    exit1()
-    ReleaseKey(key)
-    exit1()
-    t.sleep(0.1)     
+def keySequence(keyDurationDict:dict[int:list[float, int]]) -> None: # {key:[duration, amount]}
+    for key, details in keyDurationDict.items():
+        duration:float = details[0]
+        amount:int = details[1]
+        for _ in range(amount):
+            PressKey(key)
+            time.sleep(duration)
+            ReleaseKey(key)
+            time.sleep(0.1)
 
-def sprint(dur):
-    exit1()
+def sprint(duration) -> None:
     PressKey(W)
-    exit1()
     PressKey(SPACE)
-    exit1()
-    t.sleep(dur)
-    exit1()
+    time.sleep(duration)
     ReleaseKey(SPACE)
-    exit1()
     ReleaseKey(W)
-    exit1()
 
-def sprintback(dur):
-    exit1()
-    PressKey(S)
-    exit1()
-    PressKey(SPACE)
-    exit1()
-    t.sleep(dur)
-    exit1()
-    ReleaseKey(SPACE)
-    exit1()
-    ReleaseKey(S)
-    exit1()
+def finish() -> None:
+    while True:
+        time.sleep(0.01)
+        if keyboard.is_pressed("enter"):
+            os._exit(0)
 
-def exit1():
-    if k.is_pressed("enter"):
-        raise KeyboardInterrupt
-def main():
-    d=20
-    d1=18
-    a=3.5
-    b=0.9
-    c=0.8
-    diff=+0.8
-    angle=75
-    cycle=1
+def main() -> None:
+    degrees:int = 20
+    cycle:int = 1
     for j in range(1,6):
-            print(j,"...")
-            exit1()
-            t.sleep(1)
-    while run:
+        print(f"{j}...")
+        time.sleep(1)
+    while True:
         print(cycle)
-        keyPress(G,0.1)
-        t.sleep(0.1)
-        keyPress(F,0.1)
-        t.sleep(0.1)
-        keyPress(F,0.1)
-        t.sleep(0.1)
-        keyPress(E,0.1)
-        t.sleep(0.1)
-        keyPress(E,0.1)
-        t.sleep(5)
-
+        keySequence({G:[0.1, 1], F:[0.1, 2], E:[0.1, 2]})
+        time.sleep(5)
         #------
-
-        Mouse(-23*d,20*d)
+        Mouse(-23*degrees,20*degrees)
         sprint(3)
-        Mouse(-90*d,10*d)
+        Mouse(-90*degrees,10*degrees)
         sprint(0.3)
-        t.sleep(0.1)
-        Mouse(-20*d,-5*d)
-        t.sleep(0.5)
-        
+        time.sleep(0.1)
+        Mouse(-20*degrees,-5*degrees)
+        time.sleep(0.5)
         #------
-        
         PressKey(J)
-        t.sleep(1)
-        keyPress(Q,0.1)
-        keyPress(P,0.5)
-        t.sleep(5)
-        keyPress(Q,0.1)
+        time.sleep(1)
+        keySequence({Q:[0.1, 1], P:[0.5, 1]})
+        time.sleep(5)
+        keySequence({Q:[0.1, 1]})
         ReleaseKey(J)
-        t.sleep(0.5)
-        Mouse(160*d,-30*d)
-        keyPress(W,0.1)
+        time.sleep(0.5)
+        Mouse(160*degrees,-30*degrees)
+        keySequence({W:[0.1, 1]})
         sprint(7)
         cycle+=1
         
 
 if __name__ == "__main__":
-    main()
-
-
+    threads = [threading.Thread(target=main, daemon=True), threading.Thread(target=finish, daemon=False)]
+    for thread in threads:
+        thread.start()
+    for thread in threads:
+        thread.join()
